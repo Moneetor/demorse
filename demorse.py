@@ -93,7 +93,7 @@ def decode_morse_code(pure_morse_code_2_decode):
     decode_string = ""
     morse_string = " ".join(pure_morse_code_2_decode)
     for i in pure_morse_code_2_decode:
-        decode_string += MORSE_CODE.get(i, '')
+        decode_string += MORSE_CODE.get(i, ' ')
     if len(decode_string) > 0:
         return morse_string, decode_string
     else:

@@ -103,13 +103,12 @@ def decode_morse_code(pure_morse_code_2_decode):
 def leave_plain_text(morse_string_code):
     # Clean from unnecessary signs
     chars = re.findall('[.]|-| ', morse_string_code, re.DOTALL)
+    if not chars:
+        return None
     decode_morse_string = ''.join(chars)
 
     # return string2list
-    if len(decode_morse_string) > 0:
-        return decode_morse_string.split(' ')
-    else:
-        return None
+    return decode_morse_string.split(' ')
 
 
 # ----
